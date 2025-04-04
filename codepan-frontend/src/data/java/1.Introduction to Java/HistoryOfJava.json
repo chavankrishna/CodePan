@@ -1,0 +1,60 @@
+{
+    "title": "History Of Java",
+    "sections": [
+      {
+        "heading": "Early Development (1991 - 1995)",
+        "type": "list",
+        "content": [
+          "<strong>1991</strong> – Java was initiated as part of the Green Project by James Gosling, Mike Sheridan, and Patrick Naughton at Sun Microsystems.",
+          "<strong>Original goal:</strong> Create a platform-independent language for consumer electronics (like TVs, set-top boxes).",
+          "The language was initially called <strong>Oak</strong>, named after an oak tree outside Gosling’s office.",
+          "<strong>1995</strong> – Oak was renamed <strong>Java</strong>, inspired by Java coffee from Indonesia, due to trademark issues.",
+          "Java was officially released as a core component of Sun Microsystems' Java Platform."
+        ]
+      },
+      {
+        "heading": "🔹 Java Principles",
+        "type": "list",
+        "description": "When Java was designed, the creators followed several key principles:",
+        "content": [
+          "Simple, Object-Oriented, and Familiar",
+          "Robust and Secure",
+          "Architecture-Neutral and Portable",
+          "High Performance",
+          "Interpreted, Threaded, and Dynamic"
+        ]
+      },
+      {
+        "heading": "🔹 Major Java Versions & Milestones",
+        "type": "table",
+        "headers": ["Year", "Version", "Key Features"],
+        "rows": [
+          ["1996", "Java 1.0", "First public release. Applets introduced."],
+          ["1998", "Java 1.2", "\"Java 2\" branding started; Collections framework introduced."],
+          ["2004", "Java 5", "Generics, annotations, and enhanced for-loop added."],
+          ["2006", "Java 6", "Improved performance and scripting language support (JSR 223)."],
+          ["2011", "Java 7", "Try-with-resources, diamond operator, and NIO.2 added."],
+          ["2014", "Java 8", "Lambda expressions, Stream API, new Date/Time API. Huge leap forward."],
+          ["2017", "Java 9", "Modular system introduced (Project Jigsaw)."],
+          ["2018", "Java 10–11", "Java 11 became a Long Term Support (LTS) version."],
+          ["2021", "Java 17", "Latest LTS with enhanced pattern matching, sealed classes, and more."]
+        ]
+      },
+      {
+        "heading": "🔹 Acquisition by Oracle",
+        "type": "paragraph",
+        "content": [
+          "In 2010, Oracle Corporation acquired Sun Microsystems, and with it, the rights to Java. Since then, Oracle has managed Java’s development and licensing."
+        ]
+      },
+      {
+        "heading": "🔹 Java Today",
+        "type": "paragraph",
+        "content": [
+          "Java is still widely used in enterprise applications, Android development, web servers, financial services, and more.",
+          "Modern Java follows a 6-month release cycle for regular updates. Tools like <strong>Spring Boot</strong>, <strong>Hibernate</strong>, and <strong>Maven</strong> have become part of the Java ecosystem."
+        ]
+      }
+    ]
+  }
+  
