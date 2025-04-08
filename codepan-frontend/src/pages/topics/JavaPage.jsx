@@ -64,7 +64,7 @@ const javaTopics = [
 
 const JavaPage = () => {
     return (
-      <div className="container mx-auto py-20 px-5">
+      <div className="container mx-auto py-32 px-5">
         <div className="grid grid-cols-12 gap-6">  
           {/* Left Sidebar */}
           <div className="col-span-12 md:col-span-3 hidden md:block" />

@@ -1,7 +1,8 @@
 import React from 'react';
-import historyData from '../../../src/data/java/1.Introduction to Java/HistoryOfJava.json'
+//import jsHistoryData from '../../../src/data/javascript/1.Introduction to JavaScript/HistoryOfJavaScript.json';
+import jsHistoryData from '../../../data/javascript/1.Introduction of JavaScript/HistoryOfJavaScript.json';
 
-const History = () => {
+const HistoryOfJs = () => {
   return (
     <div className="container mx-auto py-32 px-5 font-segoe">
       <div className="grid grid-cols-12 gap-6">
@@ -9,9 +10,9 @@ const History = () => {
 
         <div className="col-span-12 md:col-span-6">
           <article className="text-gray-800 dark:text-gray-100">
-            <h1 className="text-4xl font-bold mb-6">{historyData.title}</h1>
+            <h1 className="text-4xl font-bold mb-6">{jsHistoryData.title}</h1>
 
-            {historyData.sections.map((section, index) => (
+            {jsHistoryData.sections.map((section, index) => (
               <div key={index}>
                 <h2 className="text-2xl font-semibold mt-8 mb-4">{section.heading}</h2>
 
@@ -26,11 +27,12 @@ const History = () => {
                       ))}
                     </ul>
                   </>
-                )} 
+                )}
 
-                {section.type === 'paragraph' && section.content.map((para, i) => (
-                  <p key={i} className="text-base leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: para }} />
-                ))}
+                {section.type === 'paragraph' &&
+                  section.content.map((para, i) => (
+                    <p key={i} className="text-base leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: para }} />
+                  ))}
 
                 {section.type === 'table' && (
                   <div className="overflow-x-auto">
@@ -65,4 +67,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default HistoryOfJs;

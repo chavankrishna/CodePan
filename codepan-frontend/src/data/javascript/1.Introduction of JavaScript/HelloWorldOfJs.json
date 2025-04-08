@@ -1,0 +1,40 @@
+{
+    "title": "Hello World in JavaScript",
+    "sections": [
+      {
+        "heading": "🔹 Introduction",
+        "type": "paragraph",
+        "content": [
+          "The <strong>Hello World</strong> program is a traditional first step when learning any programming language. In JavaScript, it demonstrates how to output text using different methods."
+        ]
+      },
+      {
+        "heading": "🔹 Using console.log()",
+        "type": "paragraph",
+        "content": [
+          "The <code>console.log()</code> method is used to print messages to the browser console.",
+          "<strong>Example:</strong>",
+          "<code>console.log('Hello, World!');</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Using alert()",
+        "type": "paragraph",
+        "content": [
+          "The <code>alert()</code> method displays a popup alert with the specified message.",
+          "<strong>Example:</strong>",
+          "<code>alert('Hello, World!');</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Using document.write()",
+        "type": "paragraph",
+        "content": [
+          "The <code>document.write()</code> method writes content directly into the HTML document.",
+          "<strong>Example:</strong>",
+          "<code>document.write('Hello, World!');</code>"
+        ]
+      }
+    ]
+  }
+  
