@@ -28,8 +28,7 @@ app.use('/api/signin', signinRoute);
 //app.use('/api/posts', postRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Welcome to CodePan Backend API 🎉',process.env.CLIENT_URL);
-
+    res.send('Welcome to CodePan Backend API 🎉');
   });
   
 
