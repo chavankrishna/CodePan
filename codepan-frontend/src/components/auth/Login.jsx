@@ -26,7 +26,7 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/signin`, {      
+      const response = await fetch(`https://codepan-backend.onrender.com/api/signin`, {      
         method: "POST",                                   
         headers: { "Content-Type": "application/json" },         
         credentials: "include", // to include cookies (token)        
