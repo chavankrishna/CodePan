@@ -29,8 +29,8 @@ app.use('/api/signin', signinRoute);
 
 app.get('/', (req, res) => {
     res.send('Welcome to CodePan Backend API 🎉');
-    console.log("CORS Origin Allowed:", process.env.CLIENT_URL);
-    console.log("PORT :", process.env.PORT);
+    res.send("CORS Origin Allowed:", process.env.CLIENT_URL);
+    res.send("PORT :", process.env.PORT);
 
   });
   
