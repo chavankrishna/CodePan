@@ -1,6 +1,7 @@
 import React from 'react';
 //import helloData from '../../../data/javascript/1.Introduction of JavaScript/helloWorldOfJs.json';
-import helloData from '../../../data/javascript/1.Introduction of JavaScript/HelloWorldOfJs.json'
+// import helloData from '../../../data/javascript/1.Introduction of JavaScript/HelloWorldOfJs.json'
+import helloData from '../../../data/javascript/1.Introduction-of-JavaScript/HelloWorldOfJs.json'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
