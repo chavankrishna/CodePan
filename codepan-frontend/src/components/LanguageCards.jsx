@@ -31,8 +31,8 @@ const topics = [
   { name: "CSS", icon: <SiCss3 className="text-blue-500 text-4xl" /> },
 ];
 
-const LanguageCards = ({ searchTerm = "" }) => {
-  const navigate = useNavigate();
+const LanguageCards = ({ searchTerm = "" }) => {       
+  const navigate = useNavigate();   
 
   const formatPath = (name) =>
     "/topics/" +
