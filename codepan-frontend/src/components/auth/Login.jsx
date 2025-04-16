@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
+const API = import.meta.env.VITE_API_URL;
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [credentials, setCredentials] = useState({
@@ -26,6 +28,7 @@ const Login = () => {
     setError("");
 
     try {
+      console.log("API Endpoint:", API);
       const response = await fetch(`https://codepan-backend.onrender.com/api/signin`, {      
         method: "POST",                                   
         headers: { "Content-Type": "application/json" },         
