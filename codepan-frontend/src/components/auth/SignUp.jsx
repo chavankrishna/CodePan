@@ -77,7 +77,7 @@ const SignUp = () => {
     try {
       console.log("API Endpoint:", API);
 
-      const response = await fetch(`https://codepan-backend.onrender.com/api/signup`, {
+      const response = await fetch(`${API}/api/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
