@@ -62,16 +62,18 @@ const SignUp = () => {
     setServerError(""); // clear server error on input
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {     
+    e.preventDefault();   
 
     const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
+    if (Object.keys(validationErrors).length > 0) {   
       setErrors(validationErrors);
       return;
     }
 
     try {
+      console.log("API Endpoint:", process.env.REACT_APP_API_URL);
+
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/signup`, {
         method: "POST",
         headers: {
