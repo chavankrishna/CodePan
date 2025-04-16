@@ -1,6 +1,7 @@
 import React from 'react';
 //import jsHistoryData from '../../../src/data/javascript/1.Introduction to JavaScript/HistoryOfJavaScript.json';
-import jsHistoryData from '../../../data/javascript/1.Introduction of JavaScript/HistoryOfJavaScript.json';
+//import jsHistoryData from '../../../data/javascript/1.Introduction of JavaScript/HistoryOfJavaScript.json';
+import jsHistoryData from '../../../data/javascript/1.Introduction-of-JavaScript/HistoryOfJavaScript.json'
 
 const HistoryOfJs = () => {
   return (

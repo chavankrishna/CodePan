@@ -1,6 +1,6 @@
 import React from 'react';
-import historyData from '../../../src/data/java/1.Introduction to Java/HistoryOfJava.json'
-
+//import historyData from '../../../src/data/java/1.Introduction to Java/HistoryOfJava.json'
+import historyData from '../../data/java/1.Introduction-to-Java/HistoryOfJava.json'
 const History = () => {
   return (
     <div className="container mx-auto py-32 px-5 font-segoe">

@@ -1,6 +1,6 @@
 import React from 'react';
-import featuresData from '../../../data/javascript/1.Introduction of JavaScript/FeaturesOfJs.json';
-
+//import featuresData from '../../../data/javascript/1.Introduction of JavaScript/FeaturesOfJs.json';
+import featuresData from '../../../data/javascript/1.Introduction-of-JavaScript/FeaturesOfJs.json'
 const FeaturesOfJs = () => {
   return (
     <div className="container mx-auto py-32 px-5 font-segoe">
