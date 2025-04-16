@@ -72,7 +72,7 @@ const SignUp = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/signup", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -198,8 +198,8 @@ const SignUp = () => {
 
         {/* Already have an account */}
         <p className="text-sm text-center mt-6 text-gray-600 dark:text-gray-400">
-          Already have an account?{" "}
-          <Link to="/login" className="text-cyan-500 hover:underline">
+          Already have an account?{" "} 
+          <Link to="/login" className="text-cyan-500 hover:underline">  
             Sign In
           </Link>
         </p>
