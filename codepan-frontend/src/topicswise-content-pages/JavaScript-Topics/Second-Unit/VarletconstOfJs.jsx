@@ -1,10 +1,9 @@
 import React from 'react';
-import useCasesData from '../../../data/javascript/1.Introduction-of-JavaScript/UseCasesOfJs.json';
-
+import varData from '../../../data/javascript/2.Variables-and-DataType-of-JS/VarletconstOfJs.json';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const UseCases = () => {   
+const VarletconstOfJs = () => {
   const isCodeBlock = (text) => /<code>.*<\/code>/.test(text.trim());
   const extractCode = (htmlString) => htmlString.replace(/<\/?code>/g, '');
 
@@ -15,9 +14,9 @@ const UseCases = () => {
 
         <div className="col-span-12 md:col-span-6">
           <article>
-            <h1 className="text-4xl font-bold mb-6">{useCasesData.title}</h1>
+            <h1 className="text-4xl font-bold mb-6">{varData.title}</h1>
 
-            {useCasesData.sections.map((section, index) => (
+            {varData.sections.map((section, index) => (
               <div key={index}>
                 <h2 className="text-2xl font-semibold mt-8 mb-4">{section.heading}</h2>
 
@@ -70,4 +69,4 @@ const UseCases = () => {
   );
 };
 
-export default UseCases;
+export default VarletconstOfJs;

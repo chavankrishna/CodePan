@@ -22,6 +22,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import SignUp from "./components/auth/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import UseCases from "./topicswise-content-pages/JavaScript-Topics/First-Unit/UseCasesOfJs.jsx";
+import VarletconstOfJs from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/VarletconstOfJs.jsx";
 
 
 const AppRoutes = () => {
@@ -49,6 +50,7 @@ const AppRoutes = () => {
             <Route path="/topics/javascript/hello-world" element={<HelloWorldOfJs />} />
             <Route path="/topics/javascript/use-cases" element={<UseCases />} /> 
 
+            <Route path="/topics/javascript/var-vs-let-vs-const" element={<VarletconstOfJs />} />
 
 
             <Route path="/topics/java" element={<JavaPage />} />

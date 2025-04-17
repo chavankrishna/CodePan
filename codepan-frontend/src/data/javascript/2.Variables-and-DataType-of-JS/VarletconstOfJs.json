@@ -1,0 +1,50 @@
+{
+    "title": "var, let, and const in JavaScript",
+    "sections": [
+      {
+        "heading": "🔹 Introduction",
+        "type": "paragraph",
+        "content": [
+          "In JavaScript, variables can be declared using <code>var</code>, <code>let</code>, and <code>const</code>. Each has different scoping rules and use cases."
+        ]
+      },
+      {
+        "heading": "🔹 var",
+        "type": "paragraph",
+        "content": [
+          "The <code>var</code> keyword is function-scoped and was the traditional way to declare variables before ES6.",
+          "<strong>Example:</strong>",
+          "<code>var name = 'John';</code>"
+        ]
+      },
+      {
+        "heading": "🔹 let",
+        "type": "paragraph",
+        "content": [
+          "The <code>let</code> keyword allows you to declare block-scoped variables. It's preferable over <code>var</code> for most use cases.",
+          "<strong>Example:</strong>",
+          "<code>let age = 25;</code>"
+        ]
+      },
+      {
+        "heading": "🔹 const",
+        "type": "paragraph",
+        "content": [
+          "The <code>const</code> keyword is also block-scoped and is used to declare constants. Once assigned, the value cannot be changed.",
+          "<strong>Example:</strong>",
+          "<code>const PI = 3.14159;</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Summary",
+        "type": "list",
+        "description": "Here’s a quick summary of the differences between var, let, and const:",
+        "content": [
+          "<strong>Scope:</strong> <code>var</code> is function-scoped, <code>let</code> and <code>const</code> are block-scoped.",
+          "<strong>Reassignment:</strong> <code>var</code> and <code>let</code> can be reassigned, <code>const</code> cannot.",
+          "<strong>Hoisting:</strong> <code>var</code> is hoisted and initialized with <code>undefined</code>, <code>let</code> and <code>const</code> are hoisted but not initialized."
+        ]
+      }
+    ]
+  }
+  
