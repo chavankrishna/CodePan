@@ -21,6 +21,7 @@ import Contact from "./pages/Contact.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import SignUp from "./components/auth/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
+import UseCases from "./topicswise-content-pages/JavaScript-Topics/First-Unit/UseCasesOfJs.jsx";
 
 
 const AppRoutes = () => {
@@ -46,6 +47,7 @@ const AppRoutes = () => {
             <Route path="/topics/javascript/history" element={<HistoryOfJs />} /> 
             <Route path="/topics/javascript/features" element={<FeaturesOfJs />} />
             <Route path="/topics/javascript/hello-world" element={<HelloWorldOfJs />} />
+            <Route path="/topics/javascript/use-cases" element={<UseCases />} /> 
 
 
 

@@ -1,0 +1,34 @@
+{
+    "title": "Use Cases of JavaScript",
+    "sections": [
+      {
+        "heading": "🔹 Introduction",
+        "type": "paragraph",
+        "content": [
+          "JavaScript is a versatile programming language used for a wide range of applications. It’s not limited to just web development but also powers mobile apps, server-side applications, and more."
+        ]
+      },
+      {
+        "heading": "🔹 Common Use Cases",
+        "type": "list",
+        "description": "Here are some of the most popular use cases for JavaScript:",
+        "content": [
+          "<strong>1. Web Development:</strong> Enhancing interactivity in websites using DOM manipulation, form validation, and dynamic content updates.",
+          "<strong>2. Mobile App Development:</strong> Building cross-platform mobile apps using frameworks like React Native.",
+          "<strong>3. Server-side Development:</strong> Handling backend logic using Node.js.",
+          "<strong>4. Game Development:</strong> Creating browser-based games using libraries like Phaser.js.",
+          "<strong>5. Desktop Applications:</strong> Developing cross-platform apps using Electron.",
+          "<strong>6. Real-Time Applications:</strong> Enabling real-time features like chat, live notifications using WebSockets and Socket.io."
+        ]
+      },
+      {
+        "heading": "🔹 Example: Dynamic HTML Content",
+        "type": "paragraph",
+        "content": [
+          "Below is a simple example that dynamically updates content in a web page using JavaScript:",
+          "<code>document.getElementById('demo').innerHTML = 'Hello from JavaScript!';</code>"
+        ]
+      }
+    ]
+  }
+  
