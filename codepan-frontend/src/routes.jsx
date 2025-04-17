@@ -50,12 +50,9 @@ const AppRoutes = () => {
 
 
             <Route path="/topics/java" element={<JavaPage />} />
-            <Route path="/topics/java/history" element={<History />} />
+            <Route path="/topics/java/history" element={<History />} />   
 
-
-
-
-            <Route path="*" element={<h1>404 Not Found</h1>} />
+            <Route path="*" element={<h1>404 Not Found</h1>} />    
           </Routes>
         </AnimatePresence>
         <Footer />
