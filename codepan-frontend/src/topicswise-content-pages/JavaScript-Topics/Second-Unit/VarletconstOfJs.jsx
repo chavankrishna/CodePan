@@ -14,7 +14,7 @@ const VarletconstOfJs = () => {
 
         <div className="col-span-12 md:col-span-6">
           <article>
-            <h1 className="text-4xl font-bold mb-6">{varData.title}</h1>
+            <h1 className="text-4xl font-bold mb-6">{varData.title}</h1> 
 
             {varData.sections.map((section, index) => (
               <div key={index}>
