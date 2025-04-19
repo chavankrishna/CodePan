@@ -1,0 +1,92 @@
+{
+    "title": "Primitive Data Types in JavaScript",
+    "sections": [
+      {
+        "heading": "🔹 Introduction",
+        "type": "paragraph",
+        "content": [
+          "JavaScript has a set of primitive data types that are not objects and have no methods. These types represent single values and are immutable."
+        ]
+      },
+      {
+        "heading": "🔹 Number",
+        "type": "paragraph",
+        "content": [
+          "The <strong>Number</strong> type is used for both integer and floating-point numbers.",
+          "<strong>Example:</strong>",
+          "<code>let count = 10;</code>",
+          "<code>let price = 99.99;</code>"
+        ]
+      },
+      {
+        "heading": "🔹 String",
+        "type": "paragraph",
+        "content": [
+          "The <strong>String</strong> type represents textual data and is enclosed in single, double, or backtick quotes.",
+          "<strong>Example:</strong>",
+          "<code>let name = 'Alice';</code>",
+          "<code>let greeting = `Hello, ${name}`;</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Boolean",
+        "type": "paragraph",
+        "content": [
+          "The <strong>Boolean</strong> type can only be <code>true</code> or <code>false</code>. It is typically used in conditional statements.",
+          "<strong>Example:</strong>",
+          "<code>let isLoggedIn = true;</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Undefined",
+        "type": "paragraph",
+        "content": [
+          "A variable that has been declared but not assigned a value is of type <strong>undefined</strong>.",
+          "<strong>Example:</strong>",
+          "<code>let user;</code> <br/> <code>console.log(user); // undefined</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Null",
+        "type": "paragraph",
+        "content": [
+          "<strong>Null</strong> is a special keyword that represents an intentional absence of any object value.",
+          "<strong>Example:</strong>",
+          "<code>let selectedItem = null;</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Symbol (ES6)",
+        "type": "paragraph",
+        "content": [
+          "<strong>Symbol</strong> is a unique and immutable data type introduced in ES6, often used to create unique object property keys.",
+          "<strong>Example:</strong>",
+          "<code>let sym = Symbol('id');</code>"
+        ]
+      },
+      {
+        "heading": "🔹 BigInt (ES2020)",
+        "type": "paragraph",
+        "content": [
+          "<strong>BigInt</strong> is used to represent integers larger than the <strong>Number.MAX_SAFE_INTEGER</strong>.",
+          "<strong>Example:</strong>",
+          "<code>let bigNumber = 1234567890123456789012345678901234567890n;</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Summary",
+        "type": "list",
+        "description": "Here's a quick summary of all primitive data types in JavaScript:",
+        "content": [
+          "<strong>Number:</strong> Represents numeric values, both integers and floats.",
+          "<strong>String:</strong> Represents text data.",
+          "<strong>Boolean:</strong> Represents logical true/false.",
+          "<strong>Undefined:</strong> A variable that has been declared but not assigned a value.",
+          "<strong>Null:</strong> Denotes a deliberate non-value.",
+          "<strong>Symbol:</strong> Unique and immutable identifier (used for object properties).",
+          "<strong>BigInt:</strong> Used for arbitrarily large integers."
+        ]
+      }
+    ]
+  }
+  

@@ -1,18 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; //
+import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi"; 
 import varData from '../../../data/javascript/2.Variables-and-DataType-of-JS/VarletconstOfJs.json';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const VarletconstOfJs = () => {
+const VarletconstOfJs = () => {    
   const isCodeBlock = (text) => /<code>.*<\/code>/.test(text.trim());
-  const extractCode = (htmlString) => htmlString.replace(/<\/?code>/g, '');
+  const extractCode = (htmlString) => htmlString.replace(/<\/?code>/g, '');  
 
   return (
-    <div className="container mx-auto py-32 px-5 font-segoe bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div className="container mx-auto py-32 sm:py-24 px-5 font-segoe bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
       <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-3 hidden md:block" />
+        <div className="col-span-12 md:col-span-3 hidden md:block" /> 
 
-        <div className="col-span-12 md:col-span-6">
+        <div className="col-span-12 md:col-span-6"> 
+          {/* Breadcrumb Navigation */}      
+          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">        
+            <ul className="flex flex-wrap space-x-1 items-center">  
+              <li>
+                  <Link to="/" className="text-blue-700 hover:underline">Home</Link>
+                  <span className="mx-1">»</span>
+              </li>
+              <li>
+                  <Link to="/topics/javascript" className="text-blue-700 hover:underline">JavaScript Tutorials</Link>
+                  <span className="mx-1">»</span> 
+              </li>
+              <li className="text-gray-800 dark:text-gray-200">JavaScript var , let , const </li>
+            </ul>
+          </nav>
+
           <article>
             <h1 className="text-4xl font-bold mb-6">{varData.title}</h1> 
 
@@ -69,4 +86,4 @@ const VarletconstOfJs = () => {
   );
 };
 
-export default VarletconstOfJs;
+export default VarletconstOfJs;    

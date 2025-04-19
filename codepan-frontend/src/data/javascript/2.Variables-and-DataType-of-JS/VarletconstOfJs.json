@@ -5,14 +5,15 @@
         "heading": "🔹 Introduction",
         "type": "paragraph",
         "content": [
-          "In JavaScript, variables can be declared using <code>var</code>, <code>let</code>, and <code>const</code>. Each has different scoping rules and use cases."
+          "In JavaScript, variables can be declared using <strong>var</strong>, <strong>let</strong>, and <strong>const</strong>. Each has different scoping rules and use cases."
+
         ]
       },
       {
         "heading": "🔹 var",
         "type": "paragraph",
         "content": [
-          "The <code>var</code> keyword is function-scoped and was the traditional way to declare variables before ES6.",
+          "The <strong>var</strong> keyword is function-scoped and was the traditional way to declare variables before ES6.",
           "<strong>Example:</strong>",
           "<code>var name = 'John';</code>"
         ]
@@ -21,7 +22,7 @@
         "heading": "🔹 let",
         "type": "paragraph",
         "content": [
-          "The <code>let</code> keyword allows you to declare block-scoped variables. It's preferable over <code>var</code> for most use cases.",
+          "The <strong>let</strong> keyword allows you to declare block-scoped variables. It's preferable over <strong>var</strong> for most use cases.",
           "<strong>Example:</strong>",
           "<code>let age = 25;</code>"
         ]
@@ -30,7 +31,7 @@
         "heading": "🔹 const",
         "type": "paragraph",
         "content": [
-          "The <code>const</code> keyword is also block-scoped and is used to declare constants. Once assigned, the value cannot be changed.",
+          "The <strong>const</strong> keyword is also block-scoped and is used to declare constants. Once assigned, the value cannot be changed.",
           "<strong>Example:</strong>",
           "<code>const PI = 3.14159;</code>"
         ]

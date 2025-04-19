@@ -81,13 +81,25 @@ const JavaScriptPage = () => {
     .filter(Boolean); // remove null entries
 
   return (
-    <div className="container mx-auto py-32 px-5">
+    <div className="container mx-auto py-32 sm:py-24 px-5"> 
       <div className="grid grid-cols-12 gap-6">
         {/* Left Sidebar */}
         <div className="col-span-12 md:col-span-3 hidden md:block" />
 
         {/* Main Content */}
         <div className="col-span-12 md:col-span-6">
+          
+          {/* Breadcrumb Navigation */}      
+          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">    
+            <ul className="flex flex-wrap space-x-1 items-center">
+              <li>
+                <Link to="/" className="text-blue-700 hover:underline">Home</Link>
+                <span className="mx-1">»</span>
+              </li>        
+              <li className="text-gray-800 dark:text-gray-200">JavaScript tutorials</li> 
+            </ul>
+          </nav>
+
           <h1 className="text-3xl font-bold mb-6">JavaScript Topics</h1>
 
           {filteredTopics.length === 0 ? (

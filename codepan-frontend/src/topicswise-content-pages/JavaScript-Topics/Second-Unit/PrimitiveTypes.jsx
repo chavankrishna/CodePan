@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; //
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi"; 
-import useCasesData from '../../../data/javascript/1.Introduction-of-JavaScript/UseCasesOfJs.json';
-
+import primitiveData from '../../../data/javascript/2.Variables-and-DataType-of-JS/PrimitiveTypes.json';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const UseCases = () => {   
+const PrimitiveTypes = () => {
   const isCodeBlock = (text) => /<code>.*<\/code>/.test(text.trim());
   const extractCode = (htmlString) => htmlString.replace(/<\/?code>/g, '');
 
@@ -17,8 +16,8 @@ const UseCases = () => {
 
         <div className="col-span-12 md:col-span-6">
 
-          {/* Breadcrumb Navigation */}      
-          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">    
+            {/* Breadcrumb Navigation */}      
+            <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">    
             <ul className="flex flex-wrap space-x-1 items-center">
                 <li>
                     <Link to="/" className="text-blue-700 hover:underline">Home</Link>
@@ -28,14 +27,14 @@ const UseCases = () => {
                     <Link to="/topics/javascript" className="text-blue-700 hover:underline">JavaScript Tutorials</Link>
                     <span className="mx-1">»</span>
                 </li>
-                <li className="text-gray-800 dark:text-gray-200">JavaScript Use Cases</li>
+                <li className="text-gray-800 dark:text-gray-200">JavaScript Primitive Types</li>
             </ul>
-          </nav>
+            </nav>
 
           <article>
-            <h1 className="text-4xl font-bold mb-6">{useCasesData.title}</h1>
+            <h1 className="text-4xl font-bold mb-6">{primitiveData.title}</h1>
 
-            {useCasesData.sections.map((section, index) => (
+            {primitiveData.sections.map((section, index) => (
               <div key={index}>
                 <h2 className="text-2xl font-semibold mt-8 mb-4">{section.heading}</h2>
 
@@ -88,4 +87,4 @@ const UseCases = () => {
   );
 };
 
-export default UseCases;
+export default PrimitiveTypes;

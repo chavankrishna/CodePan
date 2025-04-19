@@ -23,6 +23,8 @@ import SignUp from "./components/auth/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import UseCases from "./topicswise-content-pages/JavaScript-Topics/First-Unit/UseCasesOfJs.jsx";
 import VarletconstOfJs from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/VarletconstOfJs.jsx";
+import PrimitiveTypes from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/PrimitiveTypes.jsx";
+import ReferenceTypes from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/ReferenceTypes.jsx";
 
 
 const AppRoutes = () => {
@@ -44,6 +46,8 @@ const AppRoutes = () => {
             <Route path="/profile" element={<Profile /> } />
 
 
+
+            { /* JavaScript pages */ }
             <Route path="/topics/javascript" element={<JavaScriptPage />} />
             <Route path="/topics/javascript/history" element={<HistoryOfJs />} /> 
             <Route path="/topics/javascript/features" element={<FeaturesOfJs />} />
@@ -51,8 +55,11 @@ const AppRoutes = () => {
             <Route path="/topics/javascript/use-cases" element={<UseCases />} /> 
 
             <Route path="/topics/javascript/var-vs-let-vs-const" element={<VarletconstOfJs />} />
+            <Route path="/topics/javascript/primitive-types" element={<PrimitiveTypes />} />
+            <Route path="/topics/javascript/reference-types" element={ <ReferenceTypes />} />
 
 
+            { /* Java pages */ }    
             <Route path="/topics/java" element={<JavaPage />} />
             <Route path="/topics/java/history" element={<History />} />   
 

@@ -1,0 +1,60 @@
+{
+    "title": "Reference Data Types in JavaScript",
+    "sections": [
+      {
+        "heading": "🔹 Introduction",
+        "type": "paragraph",
+        "content": [
+          "In JavaScript, reference data types are used to store collections of data or more complex entities. Unlike primitive types, they are mutable and are accessed by reference."
+        ]
+      },
+      {
+        "heading": "🔹 Object",
+        "type": "paragraph",
+        "content": [
+          "Objects are collections of key-value pairs. They can store multiple values and are widely used in JavaScript.",
+          "<strong>Example:</strong>",
+          "<code>let user = { name: 'Alice', age: 25 };</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Array",
+        "type": "paragraph",
+        "content": [
+          "Arrays are list-like objects used to store multiple values in a single variable.",
+          "<strong>Example:</strong>",
+          "<code>let colors = ['red', 'green', 'blue'];</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Function",
+        "type": "paragraph",
+        "content": [
+          "Functions in JavaScript are first-class objects, meaning they can be stored in variables, passed as arguments, and returned from other functions.",
+          "<strong>Example:</strong>",
+          "<code>function greet() { console.log('Hello!'); }</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Date",
+        "type": "paragraph",
+        "content": [
+          "The <strong>Date</strong> object is used to work with dates and times in JavaScript.",
+          "<strong>Example:</strong>",
+          "<code>let now = new Date();</code>"
+        ]
+      },
+      {
+        "heading": "🔹 Summary",
+        "type": "list",
+        "description": "Here’s a quick summary of reference data types in JavaScript:",
+        "content": [
+          "<strong>Object:</strong> Collection of key-value pairs.",
+          "<strong>Array:</strong> Ordered list of values.",
+          "<strong>Function:</strong> Callable object with executable code.",
+          "<strong>Date:</strong> Object representing dates and times."
+        ]
+      }
+    ]
+  }
+
