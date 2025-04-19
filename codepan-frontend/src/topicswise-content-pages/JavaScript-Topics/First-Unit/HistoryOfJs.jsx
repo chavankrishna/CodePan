@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; //
-import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi"; 
+import React from 'react';  
+import { Link } from 'react-router-dom'; //   
+import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";   
 //import jsHistoryData from '../../../src/data/javascript/1.Introduction to JavaScript/HistoryOfJavaScript.json';
 //import jsHistoryData from '../../../data/javascript/1.Introduction of JavaScript/HistoryOfJavaScript.json';
 import jsHistoryData from '../../../data/javascript/1.Introduction-of-JavaScript/HistoryOfJavaScript.json'
@@ -82,7 +82,7 @@ const HistoryOfJs = () => {
                         <div className="mt-12 flex flex-col sm:flex-row justify-between gap-4">
                             {/* Previous */}
                             <Link
-                                to="/topics/javascript"
+                                to="/topics/javascript/introduction"
                                 className="flex items-center justify-between sm:w-1/2 px-6 py-4 border rounded-xl shadow-sm bg-white dark:bg-gray-800 transition hover:shadow-md"
                             >
                                 <div className="flex items-center space-x-3">
@@ -90,7 +90,7 @@ const HistoryOfJs = () => {
                                     <div>
                                         <p className="text-sm text-gray-500 uppercase font-medium">Previous</p>    
                                         <p className="text-blue-700 text-lg hover:underline">      
-                                            JavaScript Tutorials
+                                            JavaScript Introduction
                                         </p>
                                     </div>
                                 </div>

@@ -25,6 +25,7 @@ import UseCases from "./topicswise-content-pages/JavaScript-Topics/First-Unit/Us
 import VarletconstOfJs from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/VarletconstOfJs.jsx";
 import PrimitiveTypes from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/PrimitiveTypes.jsx";
 import ReferenceTypes from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/ReferenceTypes.jsx";
+import IntroductionOfJs from "./topicswise-content-pages/JavaScript-Topics/First-Unit/IntroductionOfJs.jsx";
 
 
 const AppRoutes = () => {
@@ -47,8 +48,9 @@ const AppRoutes = () => {
 
 
 
-            { /* JavaScript pages */ }
+            { /* JavaScript pages */ }       
             <Route path="/topics/javascript" element={<JavaScriptPage />} />
+            <Route path="/topics/javascript/introduction" element={<IntroductionOfJs />} />
             <Route path="/topics/javascript/history" element={<HistoryOfJs />} /> 
             <Route path="/topics/javascript/features" element={<FeaturesOfJs />} />
             <Route path="/topics/javascript/hello-world" element={<HelloWorldOfJs />} />

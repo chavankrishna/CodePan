@@ -6,7 +6,7 @@ import { useSearch } from '../../context/SearchContext'; // ✅ Import search co
 const jsTopics = [
   {
     topic: "Introduction to JavaScript",
-    subtopics: ["History", "Features", "Hello World", "Use Cases"],
+    subtopics: ["Introduction","History", "Features", "Hello World", "Use Cases"],
   },
   {
     topic: "Variables & Data Types",

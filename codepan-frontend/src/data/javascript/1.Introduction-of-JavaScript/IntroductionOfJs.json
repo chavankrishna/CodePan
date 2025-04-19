@@ -1,0 +1,45 @@
+{
+    "title": "Introduction to JavaScript",
+    "sections": [
+      {
+        "heading": "What is JavaScript?",
+        "type": "paragraph",
+        "content": [
+          "JavaScript is a high-level, versatile programming language primarily used for enhancing web pages and applications with dynamic and interactive features.",
+          "It runs in the browser and allows developers to create rich user interfaces, control browser behavior, and manipulate HTML and CSS content on the fly."
+        ]
+      },
+      {
+        "heading": "🔹 Key Features of JavaScript",
+        "type": "list",
+        "content": [
+          "Interpreted and lightweight",
+          "Supports event-driven programming",
+          "Object-oriented with prototype-based inheritance",
+          "Works across multiple platforms and browsers",
+          "Integrated with HTML and CSS for complete web development"
+        ]
+      },
+      {
+        "heading": "🔹 Where is JavaScript Used?",
+        "type": "list",
+        "description": "JavaScript has evolved far beyond simple browser scripts. It is widely used in:",
+        "content": [
+          "Client-side web development for interactive UIs",
+          "Server-side development with Node.js",
+          "Mobile app development with React Native",
+          "Game development and real-time apps",
+          "Desktop application development using Electron"
+        ]
+      },
+      {
+        "heading": "🔹 Why Learn JavaScript?",
+        "type": "paragraph",
+        "content": [
+          "JavaScript is one of the core technologies of the web, along with HTML and CSS. It is a must-learn for any aspiring front-end or full-stack developer.",
+          "Its huge ecosystem, vibrant community, and widespread support across all modern platforms make it a powerful language to build robust, scalable, and interactive applications."
+        ]
+      }
+    ]
+  }
+  
