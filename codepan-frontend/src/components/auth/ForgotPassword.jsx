@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -10,6 +10,9 @@ const ForgotPassword = () => {
   const [newPassword, setNewPassword] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+
+  
+  const navigate = useNavigate();
 
   const handleSendOtp = async (e) => {
     e.preventDefault();
@@ -51,11 +54,24 @@ const ForgotPassword = () => {
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok) 
+      {
         setMessage(data.message || 'Password reset successful.');
-      } else {
+      
+        setTimeout(() => {
+          setMessage("");     // Optional: clear the message after 2 seconds
+          navigate("/login"); // Optionally redirect here (e.g., navigate('/login'))
+        }, 2000);
+      } 
+      else 
+      {
         setError(data.message || 'Failed to reset password.');
+      
+        setTimeout(() => {
+          setError(""); // Optional: clear the error after 2 seconds
+        }, 2000);
       }
+      
     } catch (err) {
       console.error('Error:', err);
       setError('Server error. Please try again later.');

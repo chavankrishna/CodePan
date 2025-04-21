@@ -1,6 +1,6 @@
 // controllers/authController.js
 import User from '../models/User.js';
-import { sendEmail } from '../utils/sendEmail.js';
+import { sendEmail } from '../utils/sendEmail.js';  
 import bcrypt from 'bcryptjs';
 
 export const forgotPassword = async (req, res) => {

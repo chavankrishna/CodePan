@@ -140,7 +140,7 @@ const Login = () => {
 
         {/* Sign Up redirect */}
         <p className="text-sm text-center mt-6 text-gray-600 dark:text-gray-400">
-          Don't have an account?{" "}
+          Don't have an account?{" "}  
           <Link to="/signup" className="text-cyan-500 hover:underline">
             Sign Up
           </Link>
