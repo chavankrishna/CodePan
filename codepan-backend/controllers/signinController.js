@@ -11,19 +11,22 @@ export const signin = async (req, res) => {
       return res.status(400).json({ message: "All fields are required." });
     }
 
-    // Check if user exists (by email or username)
-    const user = await User.findOne({
-      $or: [{ email: emailOrUsername }, { username: emailOrUsername }],
-    });
+    // Check if input is email or username
+    const isEmail = emailOrUsername.includes("@");
+    const query = isEmail
+      ? { email: emailOrUsername.toLowerCase() } // Normalize email
+      : { username: emailOrUsername };
+
+    const user = await User.findOne(query);
 
     if (!user) {
       return res.status(404).json({ message: "User not found." });
-    } 
+    }
 
     // Compare password
-    const isPasswordValid = await bcrypt.compare(password, user.password);   
+    const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      return res.status(401).json({ message: "Invalid credentials." }); 
+      return res.status(401).json({ message: "Invalid credentials." });
     }
 
     // Generate JWT token
@@ -31,15 +34,15 @@ export const signin = async (req, res) => {
       expiresIn: "7d",
     });
 
-    // Optional: Set token in cookie
+    // Set token in cookie (optional)
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
-    // Send success response
+    // Send response
     res.status(200).json({
       message: "Login successful.",
       user: {
@@ -48,7 +51,7 @@ export const signin = async (req, res) => {
         email: user.email,
         username: user.username,
       },
-      token, // you can skip sending this if you're using cookies only
+      token,
     });
   } catch (error) {
     console.error("Signin Error:", error);
