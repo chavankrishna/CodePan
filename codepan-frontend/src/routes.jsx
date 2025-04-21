@@ -26,6 +26,7 @@ import VarletconstOfJs from "./topicswise-content-pages/JavaScript-Topics/Second
 import PrimitiveTypes from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/PrimitiveTypes.jsx";
 import ReferenceTypes from "./topicswise-content-pages/JavaScript-Topics/Second-Unit/ReferenceTypes.jsx";
 import IntroductionOfJs from "./topicswise-content-pages/JavaScript-Topics/First-Unit/IntroductionOfJs.jsx";
+import ForgotPassword from "./components/auth/ForgotPassword.jsx";
 
 
 const AppRoutes = () => {
@@ -43,6 +44,7 @@ const AppRoutes = () => {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} /> 
+            <Route path="/forgot-password" element={<ForgotPassword />} />
 
             <Route path="/profile" element={<Profile /> } />
 

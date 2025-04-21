@@ -7,6 +7,7 @@ import connectDB from './config/db.js';
 // Import routes
 import signupRoute from './routes/signupRoute.js';  
 import signinRoute from './routes/signinRoute.js';
+import authRoutes from './routes/authRoutes.js'; 
 //import authRoutes from './routes/authRoutes.js';  
 //import postRoutes from './routes/postRoutes.js';       
 
@@ -23,7 +24,8 @@ app.use(cookieParser());
 
 // Routes
 app.use('/api/signup', signupRoute);   
-app.use('/api/signin', signinRoute);    
+app.use('/api/signin', signinRoute);   
+app.use('/api', authRoutes);
 //app.use('/api/auth', authRoutes);
 //app.use('/api/posts', postRoutes);
 
