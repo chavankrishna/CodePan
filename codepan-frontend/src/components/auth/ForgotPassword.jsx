@@ -46,7 +46,8 @@ const ForgotPassword = () => {
     setMessage('');
 
       // Password validation
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
+    //const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
     if (!passwordRegex.test(newPassword)) {
         setError('Password must be at least 6 characters and contain letters and numbers');
         setTimeout(() => setError(''), 2000);
