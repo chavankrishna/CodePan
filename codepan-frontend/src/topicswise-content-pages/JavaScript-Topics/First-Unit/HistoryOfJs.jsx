@@ -78,7 +78,7 @@ const HistoryOfJs = () => {
               </div>
             ))}
 
-            {/* Previous and Next buttons */}   
+                        {/* Previous and Next buttons */}   
                         <div className="mt-12 flex flex-col sm:flex-row justify-between gap-4">
                             {/* Previous */}
                             <Link

@@ -10,9 +10,9 @@ const IntroductionOfJs = () => {
         <div className="col-span-12 md:col-span-3 hidden md:block" />
 
         <div className="col-span-12 md:col-span-6">
-          {/* Breadcrumb */}
-          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-            <ul className="flex flex-wrap space-x-1 items-center">
+          {/* Breadcrumb */}                           
+          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">    
+            <ul className="flex flex-wrap space-x-1 items-center">    
               <li>
                 <Link to="/" className="text-blue-700 hover:underline">Home</Link>
                 <span className="mx-1">»</span>

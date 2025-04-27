@@ -78,6 +78,44 @@ const HelloWorldOfJs = () => {
                 )}
               </div>
             ))}
+
+
+            
+                            {/* Previous and Next buttons */}   
+                                                <div className="mt-12 flex flex-col sm:flex-row justify-between gap-4">
+                                                    {/* Previous */}
+                                                    <Link
+                                                        to="/topics/javascript/features"
+                                                        className="flex items-center justify-between sm:w-1/2 px-6 py-4 border rounded-xl shadow-sm bg-white dark:bg-gray-800 transition hover:shadow-md"
+                                                    >
+                                                        <div className="flex items-center space-x-3">
+                                                            <HiArrowNarrowLeft className="text-gray-500 text-5xl" />
+                                                            <div>
+                                                                <p className="text-sm text-gray-500 uppercase font-medium">Previous</p>    
+                                                                <p className="text-blue-700 text-lg hover:underline">      
+                                                                    Features of JavaScript  
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </Link>
+                                    
+                                                    {/* Next */}
+                                                    <Link
+                                                        to="/topics/javascript/use-cases" 
+                                                        className="flex items-center justify-between sm:w-1/2 px-6 py-4 border rounded-xl shadow-sm bg-white dark:bg-gray-800 transition hover:shadow-md"
+                                                    >
+                                                        <div className="flex items-center space-x-3 ml-auto">                                                    
+                                                            <div className="text-right">                                            
+                                                                <p className="text-sm text-gray-500 uppercase font-medium">Next</p>   
+                                                                <p className="text-blue-700 text-lg hover:underline">    
+                                                                   Use Cases of Javascript  
+                                                                </p>
+                                                            </div>
+                                                            <HiArrowNarrowRight className="text-gray-500 text-5xl" />  
+                                                        </div>
+                                                    </Link>
+                                                </div>
+
           </article>
         </div>
 
