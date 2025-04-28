@@ -80,7 +80,7 @@ const JavaScriptPage = () => {
     .filter(Boolean);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-24">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         
         {/* Left Sidebar - Reserved */}
