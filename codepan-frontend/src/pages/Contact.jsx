@@ -22,32 +22,32 @@ const Contact = () => {
           <p>
             📧 <strong>Email:</strong>{" "}
             <a
-              href="mailto:codepan@gmail.com"
+              href="mailto:dardcode@gmail.com"
               className="text-cyan-500 hover:underline"
             >
-              codepan@gmail.com
+              dardcode@gmail.com
             </a>
           </p>
           <p>
             💼 <strong>LinkedIn:</strong>{" "}
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/krishnachavan1"
               className="text-cyan-500 hover:underline"
               target="_blank"
               rel="noreferrer"
             >
-              linkedin.com/in/yourprofile
+              Krishna Chavan
             </a>
           </p>
           <p>
             💻 <strong>GitHub:</strong>{" "}
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/chavankrishna"
               className="text-cyan-500 hover:underline"
               target="_blank"
               rel="noreferrer"
             >
-              github.com/yourprofile
+              Krishna Chavan
             </a>
           </p>
         </div>

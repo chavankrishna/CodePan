@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="mt-10 py-6 px-4 sm:px-8 transition-colors duration-300 bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
+    <footer className="mt-10 py-6 px-4 sm:px-6 md:px-8 transition-colors duration-300 bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
         {/* Logo */}    
         <NavLink
@@ -30,7 +30,7 @@ const Footer = () => {
         {/* Social Icons */}
         <div className="flex gap-4 text-lg">
           <a
-            href="https://github.com/yourprofile"
+            href="https://github.com/chavankrishna"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-cyan-500 transition"
@@ -39,7 +39,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/krishnachavan1"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-cyan-500 transition"
@@ -48,7 +48,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:dardcode@gmail.com"
             className="hover:text-cyan-500 transition"
             title="Email"
           >

@@ -5,7 +5,7 @@ import './App.css'
 
 const App = () => {
   return (
-    <div className='text-3xl '> 
+    <div> 
        <AppRoutes /> 
     </div>
   )

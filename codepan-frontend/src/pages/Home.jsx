@@ -6,7 +6,7 @@ const Home = () => {
   const { searchTerm } = useSearch();
 
   return (
-    <div className="container mx-auto py-36 px-5">
+    <div className="container mx-auto py-36">
       <LanguageCards searchTerm={searchTerm} />
     </div>
   );
