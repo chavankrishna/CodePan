@@ -5,7 +5,7 @@ import jsIntroData from '../../../data/javascript/1.Introduction-of-JavaScript/I
 
 const IntroductionOfJs = () => {
   return (
-    <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-7 py-24">
+    <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-7 py-32 sm:py-24">
       <div className="grid grid-cols-12 gap-6">
         {/* Left Sidebar */}
         <div className="hidden md:block md:col-span-2" />
