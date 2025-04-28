@@ -47,12 +47,12 @@ const LanguageCards = ({ searchTerm = "" }) => {
   );
 
   return (
-    <section className="px-5 sm:px-4 md:px-3 py-8">
+    <section className="px-6 sm:px-8 md:px-10 lg:px-12 py-7">
       {/* Heading */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">
         Learn Programming with <span className="text-cyan-500">CodePan</span>
       </h2>
-      <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-600 dark:text-gray-300 text-center mb-8">
+      <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-300 text-center mb-8">
         "One Line at a Time"
       </p>
 

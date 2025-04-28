@@ -61,8 +61,8 @@ const Navbar = () => {
   
 
   return (
-    <nav className="fixed py-3 px-2 sm:px-3 md:px-4 w-full top-0 z-50 shadow-md transition-colors duration-300 bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-      <div className="container mx-auto  flex flex-wrap items-center justify-between gap-3">
+    <nav className="fixed w-full top-0 z-50 shadow-md transition-colors duration-300 bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-3 flex flex-wrap items-center justify-between gap-3">
         {/* Logo */}
         <NavLink
           to="/"
@@ -83,9 +83,9 @@ const Navbar = () => {
             onClick={() => setShowMobileSearch(!showMobileSearch)}
           >
             {showMobileSearch ? (
-              <FaTimes className="text-sm w-5 h-5" />
+              <FaTimes className="text-sm w-4 h-4" />
             ) : (
-              <FaSearch className="text-sm w-5 h-5" />
+              <FaSearch className="text-sm w-4 h-4" />
             )}
           </button>
         </div>
