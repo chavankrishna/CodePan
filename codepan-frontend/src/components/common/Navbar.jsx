@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaMoon, FaSun, FaSearch, FaTimes, FaUserCircle, FaBars } from "react-icons/fa";
+import {
+  FaMoon, FaSun, FaSearch, FaTimes, FaUserCircle, FaBars
+} from "react-icons/fa";
 import GlobalSearchBar from "./GlobalSearchBar.jsx";
 
+const getInitialDarkMode = () => {
+  const saved = localStorage.getItem("darkMode");
+  return saved !== null ? saved === "true" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+};
+
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(() => localStorage.getItem("darkMode") === "true");
+  const [darkMode, setDarkMode] = useState(() => getInitialDarkMode());
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -12,28 +19,16 @@ const Navbar = () => {
   const navigate = useNavigate();
   const profileRef = useRef();
 
-  // Apply dark mode to <html> based on state
   useEffect(() => {
-    const root = document.documentElement;
-    if (darkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", darkMode);
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
 
-  // Check login status
   useEffect(() => {
-    const checkLoginStatus = () => {
-      const user = localStorage.getItem("user");
-      setIsLoggedIn(!!user);
-    };
-
+    const checkLoginStatus = () => setIsLoggedIn(!!localStorage.getItem("user"));
     checkLoginStatus();
     window.addEventListener("login", checkLoginStatus);
     window.addEventListener("logout", checkLoginStatus);
-
     return () => {
       window.removeEventListener("login", checkLoginStatus);
       window.removeEventListener("logout", checkLoginStatus);
@@ -49,8 +44,8 @@ const Navbar = () => {
   }, [navigate]);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (profileRef.current && !profileRef.current.contains(event.target)) {
+    const handleClickOutside = (e) => {
+      if (profileRef.current && !profileRef.current.contains(e.target)) {
         setShowProfileDropdown(false);
       }
     };
@@ -58,67 +53,84 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  return (
-    <nav className="fixed w-full top-0 z-50 shadow-md transition-colors duration-300 bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10 py-3">
+  const handleNavLinkClick = () => {
+    setShowMobileMenu(false);
+    setShowMobileSearch(false);
+  };
 
+  return (
+    <nav className="fixed w-full top-0 z-50 shadow-md bg-white dark:bg-gray-900 dark:text-white transition-colors duration-300">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 md:px-8">
+        
         {/* Logo */}
         <NavLink
           to="/"
+          onClick={handleNavLinkClick}
           className="text-xl sm:text-2xl font-bold tracking-wide rounded-md px-3 py-1 bg-cyan-500 text-white dark:bg-cyan-600"
         >
           CodePan
         </NavLink>
 
         {/* Desktop Search */}
-        <div className="hidden sm:block flex-1 max-w-md px-4">
+        <div className="hidden sm:flex flex-1 justify-center max-w-md px-4">
           <GlobalSearchBar />
         </div>
 
-        {/* Right Side Controls */}
-        <div className="flex items-center gap-2 sm:gap-4">
-
+        {/* Right Controls */}
+        <div className="flex items-center gap-3">
+          
           {/* Mobile Search Toggle */}
           <button
-            onClick={() => setShowMobileSearch(prev => !prev)}
-            className="p-2 rounded-full border sm:hidden border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+            onClick={() => setShowMobileSearch((prev) => !prev)}
+            className="sm:hidden p-2 rounded-full border dark:border-gray-600 border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             aria-label="Toggle Search"
+            aria-expanded={showMobileSearch}
           >
             {showMobileSearch ? <FaTimes /> : <FaSearch />}
           </button>
 
           {/* Dark Mode Toggle */}
           <button
-            onClick={() => setDarkMode(prev => !prev)}
-            className="p-2 rounded-full border border-gray-300 dark:border-gray-600 transition hover:scale-110 hover:bg-gray-100 dark:hover:bg-gray-700"
-            aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            onClick={() => setDarkMode((prev) => !prev)}
+            className="p-2 rounded-full border dark:border-gray-600 border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+            aria-label="Toggle Theme"
           >
             {darkMode ? <FaSun className="text-yellow-400" /> : <FaMoon />}
           </button>
 
-          {/* Profile or Sign In */}
+          {/* Auth Section */}
           {isLoggedIn ? (
             <div ref={profileRef} className="relative">
               <button
-                onClick={() => setShowProfileDropdown(prev => !prev)}
-                className="p-2 rounded-full hover:scale-110 transition text-2xl"
-                aria-label="User Menu"
+                onClick={() => setShowProfileDropdown((prev) => !prev)}
+                className="p-2 text-2xl rounded-full hover:scale-110 transition"
+                aria-haspopup="true"
+                aria-expanded={showProfileDropdown}
+                aria-label="Profile Menu"
               >
                 <FaUserCircle />
               </button>
 
               {showProfileDropdown && (
-                <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 shadow-md rounded-md py-2 text-sm backdrop-blur-md transition-all">
+                <div
+                  className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 text-sm"
+                  role="menu"
+                >
                   <NavLink
                     to="/profile"
+                    onClick={() => {
+                      setShowProfileDropdown(false);
+                      handleNavLinkClick();
+                    }}
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    onClick={() => setShowProfileDropdown(false)}
+                    role="menuitem"
                   >
                     My Profile
                   </NavLink>
                   <button
                     onClick={handleLogout}
                     className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    role="menuitem"
                   >
                     Logout
                   </button>
@@ -128,25 +140,25 @@ const Navbar = () => {
           ) : (
             <NavLink
               to="/login"
-              className="hidden sm:block bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-600 dark:to-blue-600 px-4 py-1.5 rounded-full text-white font-semibold shadow-md transition hover:scale-105"
+              onClick={handleNavLinkClick}
+              className="hidden sm:block bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-600 dark:to-blue-600 px-4 py-1.5 rounded-full text-white font-semibold hover:scale-105 transition"
             >
               Sign In
             </NavLink>
           )}
 
-          {/* Mobile Hamburger Menu */}
+          {/* Hamburger Menu */}
           <button
-            onClick={() => setShowMobileMenu(prev => !prev)}
-            className="p-2 rounded-full sm:hidden border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+            onClick={() => setShowMobileMenu((prev) => !prev)}
+            className="sm:hidden p-2 rounded-full border dark:border-gray-600 border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             aria-label="Toggle Menu"
           >
             <FaBars />
           </button>
-
         </div>
       </div>
 
-      {/* Mobile Search Bar */}
+      {/* Mobile Search */}
       {showMobileSearch && (
         <div className="sm:hidden px-4 py-2">
           <GlobalSearchBar autoFocus />
@@ -159,8 +171,8 @@ const Navbar = () => {
           {!isLoggedIn ? (
             <NavLink
               to="/login"
+              onClick={handleNavLinkClick}
               className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-cyan-600 dark:to-blue-600 px-4 py-2 rounded-full text-white font-semibold text-center hover:scale-105 transition"
-              onClick={() => setShowMobileMenu(false)}
             >
               Sign In
             </NavLink>
@@ -168,14 +180,14 @@ const Navbar = () => {
             <>
               <NavLink
                 to="/profile"
-                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
-                onClick={() => setShowMobileMenu(false)}
+                onClick={handleNavLinkClick}
+                className="block px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 My Profile
               </NavLink>
               <button
                 onClick={handleLogout}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
+                className="w-full text-left px-4 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 Logout
               </button>
