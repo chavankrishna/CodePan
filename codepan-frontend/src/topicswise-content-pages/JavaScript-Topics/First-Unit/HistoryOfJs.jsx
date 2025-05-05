@@ -1,122 +1,101 @@
-import React from 'react';  
-import { Link } from 'react-router-dom'; //   
-import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";   
-//import jsHistoryData from '../../../src/data/javascript/1.Introduction to JavaScript/HistoryOfJavaScript.json';
-//import jsHistoryData from '../../../data/javascript/1.Introduction of JavaScript/HistoryOfJavaScript.json';
-import jsHistoryData from '../../../data/javascript/1.Introduction-of-JavaScript/HistoryOfJavaScript.json'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
+//import historyData from '../../../data/javascript/2.History-of-JavaScript/HistoryOfJs.json';
+import historyData from '../../../data/javascript/1.Introduction-of-JavaScript/HistoryOfJs.json'
 
 const HistoryOfJs = () => {
   return (
-    <div className="container mx-auto py-32 sm:py-24 px-5 font-segoe">
+    <div className="mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">  
       <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-12 md:col-span-3 hidden md:block" />
+        {/* Left Sidebar */}
+        <div className="hidden sm:block sm:col-span-2 md:col-span-3" />
 
-        <div className="col-span-12 md:col-span-6">                   
-         
-          {/* Breadcrumb Navigation */}      
-          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">    
+        {/* Main Content */}
+        <div className="col-span-12 sm:col-span-8 md:col-span-6">
+          {/* Breadcrumb */}
+          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">
             <ul className="flex flex-wrap space-x-1 items-center">
-                <li>
-                    <Link to="/" className="text-blue-700 hover:underline">Home</Link>
-                    <span className="mx-1">»</span>
-                </li>
-                <li>
-                    <Link to="/topics/javascript" className="text-blue-700 hover:underline">JavaScript Tutorials</Link>
-                    <span className="mx-1">»</span> 
-                </li>
-                <li className="text-gray-800 dark:text-gray-200">JavaScript History</li> 
+              <li>
+                <Link to="/" className="text-blue-700 hover:underline">Home</Link>
+                <span className="mx-1" aria-hidden="true">»</span>
+              </li>
+              <li>
+                <Link to="/topics/javascript" className="text-blue-700 hover:underline">JavaScript Tutorials</Link>
+                <span className="mx-1" aria-hidden="true">»</span>
+              </li>
+              <li className="text-gray-800 dark:text-gray-200">JavaScript History</li>
             </ul>
           </nav>
 
-          <article className="text-gray-800 dark:text-gray-100">
-            <h1 className="text-4xl font-bold mb-6">{jsHistoryData.title}</h1>
+          <main>   
+            <article className="text-gray-800 dark:text-gray-100">
+              <section>
+                <h1 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight text-gray-900 dark:text-white">{historyData.title}</h1>
 
-            {jsHistoryData.sections.map((section, index) => (
-              <div key={index}>
-                <h2 className="text-2xl font-semibold mt-8 mb-4">{section.heading}</h2>
+                {historyData.sections.map((section, index) => (
+                  <div key={index} className='mb-10'>
+                    <h2 className="text-xl md:text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-white">{section.heading}</h2>
 
-                {section.type === 'list' && (
-                  <>
-                    {section.description && (
-                      <p className="text-base leading-relaxed mb-2">{section.description}</p>
-                    )}
-                    <ul className="list-disc list-inside space-y-2 text-base leading-relaxed">
-                      {section.content.map((item, i) => (
-                        <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
-                      ))}
-                    </ul>
-                  </>
-                )}
-
-                {section.type === 'paragraph' &&
-                  section.content.map((para, i) => (
-                    <p key={i} className="text-base leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: para }} />
-                  ))}
-
-                {section.type === 'table' && (
-                  <div className="overflow-x-auto">
-                    <table className="table-auto border-collapse border border-gray-400 w-full text-sm">
-                      <thead>
-                        <tr className="bg-gray-200">
-                          {section.headers.map((header, hIdx) => (
-                            <th key={hIdx} className="border border-gray-400 px-4 py-2">{header}</th>
+                    {section.type === 'list' && (
+                      <>
+                        {section.description && (
+                          <p className="text-base leading-relaxed mb-2">{section.description}</p>
+                        )}
+                        <ul className="list-disc list-inside space-y-2 text-base leading-relaxed">
+                          {section.content.map((item, i) => (
+                            <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
                           ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {section.rows.map((row, rIdx) => (
-                          <tr key={rIdx}>
-                            {row.map((cell, cIdx) => (
-                              <td key={cIdx} className="border border-gray-400 px-4 py-2">{cell}</td>
-                            ))}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                        </ul>
+                      </>
+                    )}
+
+                    {section.type === 'paragraph' &&
+                      section.content.map((para, i) => (
+                        <p key={i} className="text-base leading-7 tracking-normal mb-6" dangerouslySetInnerHTML={{ __html: para }} />
+                      ))}
                   </div>
-                )}
+                ))}
+              </section>
+
+              {/* Navigation Buttons */}
+              <div className="mt-16 flex flex-col sm:flex-row justify-between gap-4">
+                {/* Previous */}
+                <Link
+                  to="/topics/javascript/introduction"
+                  aria-label="Previous: JavaScript Introduction"
+                  className="flex items-center justify-between w-[98%] sm:w-1/2 md:w-[48%] px-6 py-4 border rounded-xl shadow-sm bg-white dark:bg-gray-800 hover:shadow-md transition hover:scale-[1.02]"
+                >
+                  <div className="flex items-center space-x-3">
+                    <HiArrowNarrowLeft className="text-gray-600 dark:text-gray-300 text-3xl" />
+                    <div>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 uppercase font-medium">Previous</p>
+                      <p className="text-blue-700 text-lg hover:underline">JavaScript Introduction</p>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Next */}
+                <Link
+                  to="/topics/javascript/features"
+                  aria-label="Next: JavaScript Features"
+                  className="flex items-center justify-between w-[98%] sm:w-1/2 md:w-[48%] px-6 py-4 border rounded-xl shadow-sm bg-white dark:bg-gray-800 hover:shadow-md transition hover:scale-[1.02]"
+                >
+                  <div className="flex items-center space-x-3 ml-auto">
+                    <div className="text-right">
+                      <p className="text-sm text-gray-600 dark:text-gray-300 uppercase font-medium">Next</p>
+                      <p className="text-blue-700 text-lg hover:underline">JavaScript Features</p>
+                    </div>
+                    <HiArrowNarrowRight className="text-gray-600 dark:text-gray-300 text-3xl" />
+                  </div>
+                </Link>
               </div>
-            ))}
-
-                    {/* Previous and Next buttons */}   
-                        <div className="mt-12 flex flex-col sm:flex-row justify-between gap-4">
-                            {/* Previous */}
-                            <Link
-                                to="/topics/javascript/introduction"
-                                className="flex items-center justify-between sm:w-1/2 px-6 py-4 border rounded-xl shadow-sm bg-white dark:bg-gray-800 transition hover:shadow-md"
-                            >
-                                <div className="flex items-center space-x-3">
-                                    <HiArrowNarrowLeft className="text-gray-500 text-5xl" />
-                                    <div>
-                                        <p className="text-sm text-gray-500 uppercase font-medium">Previous</p>    
-                                        <p className="text-blue-700 text-lg hover:underline">      
-                                            JavaScript Introduction
-                                        </p>
-                                    </div>
-                                </div>
-                            </Link>
-            
-                            {/* Next */}
-                            <Link
-                                to="/topics/javascript/features" 
-                                className="flex items-center justify-between sm:w-1/2 px-6 py-4 border rounded-xl shadow-sm bg-white dark:bg-gray-800 transition hover:shadow-md"
-                            >
-                                <div className="flex items-center space-x-3 ml-auto">                                                    
-                                    <div className="text-right">                                            
-                                        <p className="text-sm text-gray-500 uppercase font-medium">Next</p>   
-                                        <p className="text-blue-700 text-lg hover:underline">    
-                                            Javascript Features 
-                                        </p>
-                                    </div>
-                                    <HiArrowNarrowRight className="text-gray-500 text-5xl" /> 
-                                </div>
-                            </Link>
-                        </div>
-
-          </article>
+            </article>
+          </main>
         </div>
 
-        <div className="col-span-12 md:col-span-3 hidden md:block" />
+        {/* Right Sidebar */}
+        <div className="hidden sm:block sm:col-span-2 md:col-span-3" />    
       </div>
     </div>
   );

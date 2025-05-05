@@ -5,7 +5,7 @@ import jsIntroData from '../../../data/javascript/1.Introduction-of-JavaScript/I
 
 const IntroductionOfJs = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">  
+    <div className="mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">  
       <div className="grid grid-cols-12 gap-6">
         {/* Left Sidebar */}
         <div className="hidden sm:block sm:col-span-2 md:col-span-3" />
@@ -32,11 +32,11 @@ const IntroductionOfJs = () => {
             {/* Article */}
             <article className="text-gray-800 dark:text-gray-100">
               <section>
-                <h1 className="text-3xl md:text-4xl font-bold mb-8 tracking-tight text-gray-900 dark:text-white">{jsIntroData.title}</h1>
+                <h1 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight text-gray-900 dark:text-white">{jsIntroData.title}</h1>
 
                 {jsIntroData.sections.map((section, index) => (
                   <div key={index} className='mb-10' >
-                    <h2 className="text-2xl md:text-3xl font-semibold mt-10 mb-4 text-gray-800 dark:text-white ">{section.heading}</h2>
+                    <h2 className="text-xl md:text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-white ">{section.heading}</h2>
 
                     {section.type === 'list' && (
                       <>

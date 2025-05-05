@@ -1,0 +1,55 @@
+{
+  "title": "History of JavaScript",
+  "sections": [
+    {
+      "heading": "The Birth of JavaScript",
+      "type": "paragraph",
+      "content": [
+        "JavaScript was created in 1995 by Brendan Eich while he was working at Netscape Communications. It was originally developed in just 10 days and was initially called Mocha, then renamed to LiveScript, and finally JavaScript.",
+        "Despite the name, JavaScript is not related to Java. The name was chosen as a marketing strategy to capitalize on Java's popularity at the time."
+      ]
+    },
+    {
+      "heading": "JavaScript in the Early Days",
+      "type": "list",
+      "description": "Key milestones during JavaScript’s initial years:",
+      "content": [
+        "1996: Microsoft introduced JScript, a reverse-engineered version of JavaScript for Internet Explorer.",
+        "1997: JavaScript was standardized under the name ECMAScript (ES1) by ECMA International.",
+        "1999: ECMAScript 3 (ES3) was released, introducing many important features still used today."
+      ]
+    },
+    {
+      "heading": "Modern JavaScript Evolution",
+      "type": "paragraph",
+      "content": [
+        "After a long gap, ECMAScript 5 (ES5) was released in 2009, adding features like `strict mode`, JSON support, and more consistent behavior across browsers.",
+        "The real turning point came in 2015 with ECMAScript 6 (also known as ES2015), which introduced powerful features such as classes, arrow functions, template literals, modules, and promises."
+      ]
+    },
+    {
+      "heading": "ES6 (ECMAScript 2015) Features",
+      "type": "list",
+      "description": "Key features introduced in ES6:",
+      "content": [
+        "<strong>Let and Const:</strong> Block-scoped variable declarations replacing var.",
+        "<strong>Arrow Functions:</strong> Shorter syntax for functions and lexical `this` binding.",
+        "<strong>Template Literals:</strong> String literals allowing embedded expressions using backticks.",
+        "<strong>Destructuring:</strong> Unpack values from arrays or properties from objects into variables.",
+        "<strong>Default Parameters:</strong> Assign default values to function parameters.",
+        "<strong>Rest and Spread Operators:</strong> Work with arrays and objects more flexibly.",
+        "<strong>Modules:</strong> Import and export JavaScript files cleanly and safely.",
+        "<strong>Promises:</strong> Improved handling of asynchronous operations.",
+        "<strong>Classes:</strong> Syntactic sugar over prototypes for object-oriented programming."
+      ]
+    },
+    {
+      "heading": "Continuous Growth and Community Support",
+      "type": "paragraph",
+      "content": [
+        "JavaScript now receives yearly updates through the ECMAScript standard. Each version introduces improvements, making the language more expressive and developer-friendly.",
+        "Today, JavaScript is the backbone of modern web development, supported by a vast ecosystem of libraries, frameworks (like React, Angular, Vue), and tools that continue to evolve with the community's needs."
+      ]
+    }
+  ]
+}

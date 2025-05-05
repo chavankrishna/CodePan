@@ -5,61 +5,264 @@ import { Link } from 'react-router-dom';
 const jsTopics = [
   {
     topic: "Introduction to JavaScript",
-    subtopics: ["Introduction", "History", "Features", "Hello World", "Use Cases"],
+    subtopics: [
+      "Introduction",
+      "History",
+      "Features",
+      "Hello World",
+      "Use Cases",
+      "JavaScript Engines",
+      "How JS Works",
+      "Setting up JS Environment"
+    ],
   },
   {
     topic: "Variables & Data Types",
-    subtopics: ["var vs let vs const", "Primitive Types", "Reference Types", "Type Conversion"],
+    subtopics: [
+      "var vs let vs const",
+      "Primitive Types",
+      "Reference Types",
+      "Type Conversion",
+      "Type Coercion",
+      "typeof Operator",
+      "Dynamic Typing"
+    ],
   },
   {
     topic: "Operators",
-    subtopics: ["Arithmetic", "Assignment", "Comparison", "Logical"],
+    subtopics: [
+      "Arithmetic",
+      "Assignment",
+      "Comparison",
+      "Logical",
+      "Bitwise",
+      "Ternary",
+      "typeof & instanceof"
+    ],
   },
   {
     topic: "Control Flow",
-    subtopics: ["if", "if-else", "switch", "ternary"],
+    subtopics: [
+      "if",
+      "if-else",
+      "switch",
+      "ternary",
+      "Nested Conditions",
+      "Truthy & Falsy"
+    ],
   },
   {
     topic: "Loops",
-    subtopics: ["for", "while", "do-while", "for-in & for-of"],
+    subtopics: [
+      "for",
+      "while",
+      "do-while",
+      "for-in & for-of",
+      "loop control (break & continue)",
+      "looping through arrays & objects"
+    ],
   },
   {
     topic: "Functions",
-    subtopics: ["Function Declaration", "Arrow Functions", "IIFE", "Callback Functions"],
+    subtopics: [
+      "Function Declaration",
+      "Arrow Functions",
+      "IIFE",
+      "Callback Functions",
+      "Function Expressions",
+      "Parameters & Arguments",
+      "Rest Parameters",
+      "Default Parameters",
+      "Function Scope & Closures"
+    ],
   },
   {
     topic: "Arrays",
-    subtopics: ["Array Methods", "Map & Filter", "Reduce", "forEach"],
+    subtopics: [
+      "Array Methods",
+      "Map & Filter",
+      "Reduce",
+      "forEach",
+      "find & findIndex",
+      "Array Destructuring",
+      "Spread Operator",
+      "Multidimensional Arrays"
+    ],
   },
   {
     topic: "Objects",
-    subtopics: ["Object Literals", "this keyword", "Object Methods", "Destructuring"],
+    subtopics: [
+      "Object Literals",
+      "this keyword",
+      "Object Methods",
+      "Destructuring",
+      "Object.assign",
+      "Nested Objects",
+      "Optional Chaining",
+      "Object.entries & Object.keys"
+    ],
   },
   {
     topic: "DOM Manipulation",
-    subtopics: ["Selecting Elements", "Events", "Creating & Removing Elements"],
+    subtopics: [
+      "Selecting Elements",
+      "Events",
+      "Creating & Removing Elements",
+      "Modifying Classes & Attributes",
+      "Event Delegation",
+      "DOM Traversal",
+      "Form Handling"
+    ],
   },
   {
     topic: "ES6+ Features",
-    subtopics: ["Template Literals", "Spread & Rest", "Destructuring", "Modules"],
+    subtopics: [
+      "Template Literals",
+      "Spread & Rest",
+      "Destructuring",
+      "Modules",
+      "Arrow Functions",
+      "let & const",
+      "Promises",
+      "Optional Chaining",
+      "Nullish Coalescing"
+    ],
   },
   {
     topic: "Asynchronous JS",
-    subtopics: ["Callbacks", "Promises", "async/await", "Fetch API"],
+    subtopics: [
+      "Callbacks",
+      "Promises",
+      "async/await",
+      "Fetch API",
+      "Promise.all & Promise.race",
+      "Error Handling in async"
+    ],
   },
   {
     topic: "Error Handling",
-    subtopics: ["try-catch", "throw", "Custom Errors"],
+    subtopics: [
+      "try-catch",
+      "throw",
+      "Custom Errors",
+      "Error Object",
+      "finally block"
+    ],
   },
   {
     topic: "Storage & Cookies",
-    subtopics: ["localStorage", "sessionStorage", "Cookies"],
+    subtopics: [
+      "localStorage",
+      "sessionStorage",
+      "Cookies",
+      "Difference Between Storage & Cookies",
+      "Storing JSON in localStorage"
+    ],
   },
+  {
+    topic: "JavaScript Scope & Closures",
+    subtopics: [
+      "Global vs Local Scope",
+      "Lexical Scope",
+      "Closures",
+      "Block Scope",
+      "Scope Chain"
+    ],
+  },
+  {
+    topic: "Event Loop & Concurrency",
+    subtopics: [
+      "Call Stack",
+      "Web APIs",
+      "Callback Queue",
+      "Event Loop",
+      "Microtasks vs Macrotasks"
+    ],
+  },
+  {
+    topic: "Memory Management",
+    subtopics: [
+      "Garbage Collection",
+      "Memory Leaks",
+      "References vs Values",
+      "Performance Optimization"
+    ],
+  },
+  {
+    topic: "Modules & Tooling",
+    subtopics: [
+      "ES Modules vs CommonJS",
+      "Import & Export",
+      "Bundlers (Webpack, Vite)",
+      "Transpiling with Babel",
+      "Linting & Prettier"
+    ],
+  },
+  {
+    topic: "Object-Oriented JavaScript",
+    subtopics: [
+      "Constructor Functions",
+      "Prototypes & Inheritance",
+      "ES6 Classes",
+      "Encapsulation",
+      "Polymorphism"
+    ],
+  },
+  {
+    topic: "Functional Programming in JS",
+    subtopics: [
+      "Pure Functions",
+      "Immutability",
+      "Higher-Order Functions",
+      "Function Composition",
+      "Currying & Partial Application"
+    ],
+  },
+  {
+    topic: "Regular Expressions",
+    subtopics: [
+      "Syntax & Flags",
+      "String Matching",
+      "Replace & Split",
+      "Validation Patterns"
+    ],
+  },
+  {
+    topic: "Date and Time",
+    subtopics: [
+      "Date Object",
+      "Date Methods",
+      "Formatting Dates",
+      "Working with Timezones",
+      "Using libraries like dayjs/moment.js"
+    ],
+  },
+  {
+    topic: "Unit Testing in JavaScript",
+    subtopics: [
+      "Why Testing?",
+      "Jest Basics",
+      "Testing Functions",
+      "Mocking",
+      "Test Coverage"
+    ],
+  },
+  {
+    topic: "Browser APIs",
+    subtopics: [
+      "Geolocation API",
+      "Web Storage API",
+      "Canvas API",
+      "Notification API",
+      "Clipboard API"
+    ],
+  }
 ];
+
 
 const JavaScriptPage = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">
+    <div className="mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">
       <div className="grid grid-cols-12 gap-6">
 
         {/* Left Sidebar - Reserved */}
@@ -79,7 +282,7 @@ const JavaScriptPage = () => {
             </ul>
           </nav>
 
-          <h1 className="text-2xl sm:text-3xl font-bold mb-8">JavaScript Topics</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-8">JavaScript Topics</h1>
 
           <ul className="space-y-6">
             {jsTopics.map((item, index) => (
