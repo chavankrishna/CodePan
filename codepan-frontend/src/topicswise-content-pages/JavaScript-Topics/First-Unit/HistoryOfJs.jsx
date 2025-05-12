@@ -1,12 +1,25 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
-//import historyData from '../../../data/javascript/2.History-of-JavaScript/HistoryOfJs.json';
-import historyData from '../../../data/javascript/1.Introduction-of-JavaScript/HistoryOfJs.json'
+import historyData from '../../../data/javascript/1.Introduction-of-JavaScript/HistoryOfJs.json';
 
 const HistoryOfJs = () => {
   return (
-    <div className="mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">  
+    <div className="mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-24">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>History of JavaScript | JavaScript Tutorial</title>
+        <meta name="description" content="Explore the complete history of JavaScript — from its birth in 1995 to the evolution of modern ECMAScript standards. Learn how JavaScript became the language of the web." />
+        <meta name="keywords" content="JavaScript History, ECMAScript, Brendan Eich, Evolution of JavaScript, JavaScript timeline, JavaScript versions" />
+        <meta name="author" content="CodePan Blogs" />
+        <meta property="og:title" content="History of JavaScript | JavaScript Tutorial" />
+        <meta property="og:description" content="Discover the origin and evolution of JavaScript from its early days to modern web development standards." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://code-pan-red.vercel.app/topics/javascript/history" />
+        <meta property="og:image" content="https://code-pan-red.vercel.app/images/js-history-banner.png" />
+      </Helmet>
+
       <div className="grid grid-cols-12 gap-6">
         {/* Left Sidebar */}
         <div className="hidden sm:block sm:col-span-2 md:col-span-3" />
@@ -14,7 +27,7 @@ const HistoryOfJs = () => {
         {/* Main Content */}
         <div className="col-span-12 sm:col-span-8 md:col-span-6">
           {/* Breadcrumb */}
-          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+          <nav aria-label="Breadcrumb" className="text-sm text-gray-600 dark:text-gray-400 mb-6">
             <ul className="flex flex-wrap space-x-1 items-center">
               <li>
                 <Link to="/" className="text-blue-700 hover:underline">Home</Link>
@@ -28,14 +41,16 @@ const HistoryOfJs = () => {
             </ul>
           </nav>
 
-          <main>   
+          <main>
             <article className="text-gray-800 dark:text-gray-100">
               <section>
                 <h1 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight text-gray-900 dark:text-white">{historyData.title}</h1>
 
                 {historyData.sections.map((section, index) => (
-                  <div key={index} className='mb-10'>
-                    <h2 className="text-xl md:text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-white">{section.heading}</h2>
+                  <section key={index} className="mb-10">
+                    <h2 className="text-xl md:text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-white">
+                      {section.heading}
+                    </h2>
 
                     {section.type === 'list' && (
                       <>
@@ -54,13 +69,12 @@ const HistoryOfJs = () => {
                       section.content.map((para, i) => (
                         <p key={i} className="text-base leading-7 tracking-normal mb-6" dangerouslySetInnerHTML={{ __html: para }} />
                       ))}
-                  </div>
+                  </section>
                 ))}
               </section>
 
               {/* Navigation Buttons */}
               <div className="mt-16 flex flex-col sm:flex-row justify-between gap-4">
-                {/* Previous */}
                 <Link
                   to="/topics/javascript/introduction"
                   aria-label="Previous: JavaScript Introduction"
@@ -75,7 +89,6 @@ const HistoryOfJs = () => {
                   </div>
                 </Link>
 
-                {/* Next */}
                 <Link
                   to="/topics/javascript/features"
                   aria-label="Next: JavaScript Features"
@@ -95,7 +108,7 @@ const HistoryOfJs = () => {
         </div>
 
         {/* Right Sidebar */}
-        <div className="hidden sm:block sm:col-span-2 md:col-span-3" />    
+        <div className="hidden sm:block sm:col-span-2 md:col-span-3" />
       </div>
     </div>
   );

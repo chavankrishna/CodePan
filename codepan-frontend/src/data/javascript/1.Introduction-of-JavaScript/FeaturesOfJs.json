@@ -2,7 +2,7 @@
     "title": "Features of JavaScript",
     "sections": [
       {
-        "heading": "🔹 Lightweight and Interpreted",
+        "heading": "Lightweight and Interpreted",
         "type": "paragraph",
         "content": [
           "JavaScript is a lightweight scripting language that runs directly in the browser without the need for compilation.",
@@ -10,7 +10,7 @@
         ]
       },
       {
-        "heading": "🔹 Dynamic Typing",
+        "heading": "Dynamic Typing",
         "type": "paragraph",
         "content": [
           "Variables in JavaScript are not bound to any specific data type. A variable can hold different types of data at different points in time.",
@@ -18,7 +18,7 @@
         ]
       },
       {
-        "heading": "🔹 Object-Oriented Support",
+        "heading": "Object-Oriented Support",
         "type": "list",
         "description": "JavaScript supports object-oriented programming through:",
         "content": [
@@ -28,7 +28,7 @@
         ]
       },
       {
-        "heading": "🔹 Functional Programming Capabilities",
+        "heading": "Functional Programming Capabilities",
         "type": "list",
         "description": "JavaScript encourages functional programming through:",
         "content": [
@@ -39,7 +39,7 @@
         ]
       },
       {
-        "heading": "🔹 Platform Independence",
+        "heading": "Platform Independence",
         "type": "paragraph",
         "content": [
           "JavaScript runs in all major browsers and platforms without modification.",

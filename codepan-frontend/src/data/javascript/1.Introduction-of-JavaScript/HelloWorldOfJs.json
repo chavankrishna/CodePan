@@ -1,40 +1,84 @@
 {
-    "title": "Hello World in JavaScript",
-    "sections": [
-      {
-        "heading": "🔹 Introduction",
-        "type": "paragraph",
-        "content": [
-          "The <strong>Hello World</strong> program is a traditional first step when learning any programming language. In JavaScript, it demonstrates how to output text using different methods."
-        ]
-      },
-      {
-        "heading": "🔹 Using console.log()",
-        "type": "paragraph",
-        "content": [
-          "The <code>console.log()</code> method is used to print messages to the browser console.",
-          "<strong>Example:</strong>",
-          "<code>console.log('Hello, World!');</code>"
-        ]
-      },
-      {
-        "heading": "🔹 Using alert()",
-        "type": "paragraph",
-        "content": [
-          "The <code>alert()</code> method displays a popup alert with the specified message.",
-          "<strong>Example:</strong>",
-          "<code>alert('Hello, World!');</code>"
-        ]
-      },
-      {
-        "heading": "🔹 Using document.write()",
-        "type": "paragraph",
-        "content": [
-          "The <code>document.write()</code> method writes content directly into the HTML document.",
-          "<strong>Example:</strong>",
-          "<code>document.write('Hello, World!');</code>"
-        ]
-      }
-    ]
-  }
-  
+  "title": "Hello World in JavaScript",
+  "sections": [
+    {
+      "heading": "Introduction",
+      "type": "paragraph",
+      "content": [
+        "The <strong>Hello World</strong> program is often the first step when learning a new programming language. In JavaScript, this simple task teaches how to display output and understand basic syntax.",
+        "JavaScript provides several methods to display 'Hello, World!' — each useful in different contexts, like debugging, user interaction, or dynamic content rendering."
+      ]
+    },
+    {
+      "heading": "Using console.log()",
+      "type": "paragraph",
+      "content": [
+        "The <code>console.log()</code> method outputs messages to the browser's developer console. It's widely used for debugging purposes.",
+        "<strong>Syntax:</strong>",
+        "<code>console.log('Hello, World!');</code>",
+        "<strong>Output:</strong> This will print 'Hello, World!' in the browser's console.",
+        "<strong>Use Case:</strong> When you want to track values or test code during development."
+      ]
+    },
+    {
+      "heading": "Using alert()",
+      "type": "paragraph",
+      "content": [
+        "The <code>alert()</code> function displays a popup box with a message to the user.",
+        "<strong>Syntax:</strong>",
+        "<code>alert('Hello, World!');</code>",
+        "<strong>Output:</strong> A browser dialog box will pop up with 'Hello, World!'",
+        "<strong>Use Case:</strong> For simple notifications or demo purposes. Avoid overusing in real apps."
+      ]
+    },
+    {
+      "heading": "Using document.write()",
+      "type": "paragraph",
+      "content": [
+        "The <code>document.write()</code> method writes content directly into the HTML document.",
+        "<strong>Syntax:</strong>",
+        "<code>document.write('Hello, World!');</code>",
+        "<strong>Output:</strong> Displays 'Hello, World!' on the web page itself.",
+        "<strong>Note:</strong> This method is outdated for modern apps and should be avoided after the document has finished loading."
+      ]
+    },
+    {
+      "heading": "Using innerHTML",
+      "type": "paragraph",
+      "content": [
+        "You can dynamically insert text into HTML using <code>innerHTML</code>.",
+        "<strong>HTML:</strong>",
+        "<code>&lt;div id=\"output\"&gt;&lt;/div&gt;</code>",
+        "<strong>JavaScript:</strong>",
+        "<code>document.getElementById('output').innerHTML = 'Hello, World!';</code>",
+        "<strong>Use Case:</strong> Ideal for dynamically updating parts of the DOM."
+      ]
+    },
+    {
+      "heading": "Complete HTML Example",
+      "type": "paragraph",
+      "content": [
+        "<strong>Full example combining multiple output methods:</strong>",
+        "<pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n  &lt;title&gt;Hello World Example&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;h2&gt;Output using innerHTML&lt;/h2&gt;\n  &lt;div id=\"output\"&gt;&lt;/div&gt;\n\n  &lt;script&gt;\n    // Using console.log\n    console.log('Hello, World!');\n\n    // Using alert\n    alert('Hello, World!');\n\n    // Using document.write\n    document.write('&lt;p&gt;Hello from document.write()&lt;/p&gt;');\n\n    // Using innerHTML\n    document.getElementById('output').innerHTML = 'Hello, World! via innerHTML';\n  &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;</code></pre>"
+      ]
+    },
+    {
+      "heading": "Best Practices",
+      "type": "list",
+      "description": "Here are some tips for using these methods effectively:",
+      "content": [
+        "Use <code>console.log()</code> during development for debugging.",
+        "Avoid <code>alert()</code> in production — it interrupts user experience.",
+        "Never use <code>document.write()</code> in modern web applications.",
+        "<code>innerHTML</code> is great but can expose your site to XSS if not handled safely."
+      ]
+    },
+    {
+      "heading": "Summary",
+      "type": "paragraph",
+      "content": [
+        "Displaying 'Hello, World!' may seem trivial, but it introduces essential JavaScript syntax and output methods. These basics form the foundation for dynamic web development."
+      ]
+    }
+  ]
+}
